@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Coterie</title>
+</head>
+<body>
+    
+<div class="mainbox">
+  <br><br>
+<div class="box1">
+  <br>
+  <h1>Witaj w swojej Koterii, który klan wybierzesz?</h1>
+<form>
+
+  <input type="radio" id="Torreador" name="clan"  class="clan" value="Talent i piękno są dla nich myśliwskim kamuflażem. Toreadorzy są uosobieniem legend o wampirach, które uwodzą i wabią swoje ofiary pięknem, miłością oraz zmysłowością." onchange="handleChange(this)">
+  <label for="Torreador">Torreador</label><br>
+  <input type="radio" id="Brujah" name="clan"  class="clan" value="Szybko wpadają w gniew i zawsze działają z pasją. Często są uznawani za klan hardych buntowników i zbirów, z którymi nie należy zadzierać." onchange="handleChange(this)">
+  <label for="Brujah">Brujah</label><br>
+  <input type="radio" id="Nosferatu" name="clan" class="clan" value="Jako mistrzowie gier szpiegowskich wśród nieumarłych oraz władcy podziemi gromadzą informacje, aby sprzedać je za wysoką cenę." onchange="handleChange(this)">
+  <label for="Nosferatu">Nosferatu</label>
+
+
+</form>
+</div>
+<div id="box2"></div>
+</div>
+
+  <script>
+    const data = [
+      {
+        desc: "Talent i piękno są dla nich myśliwskim kamuflażem. Toreadorzy są uosobieniem legend o wampirach, które uwodzą i wabią swoje ofiary pięknem, miłością oraz zmysłowością."
+      },{
+        desc: "Jako mistrzowie gier szpiegowskich wśród nieumarłych oraz władcy podziemi gromadzą informacje, aby sprzedać je za wysoką cenę."
+      },{
+        desc: "Szybko wpadają w gniew i zawsze działają z pasją. Często są uznawani za klan hardych buntowników i zbirów, z którymi nie należy zadzierać."
+      }
+    ]
+   function handleChange(src) {
+    const box2 = document.querySelector("#box2")
+    let klan = src.id
+    if(box2.className== "grid-container"){
+      const art = box2.querySelector("#artbox")
+      const text = box2.querySelector("#textbox")
+      if(art){
+        switch(klan){
+        case "Torreador":
+            text.innerText = data[0].desc
+            art.setAttribute("class", "grid-torreador-art")
+            break;
+        case "Nosferatu":
+            text.innerText = data[1].desc
+            art.setAttribute("class", "grid-nosferatu-art")
+            break;
+        case "Brujah":
+            text.innerText = data[2].desc
+            art.setAttribute("class", "grid-brujah-art")
+            break;
+    }
+      }
+    } else {
+      box2.classList.add("grid-container")
+    const artbox = document.createElement("div")
+    const gridtext = document.createElement("div")
+    gridtext.classList.add("grid-text")
+    artbox.setAttribute("id", "artbox")
+    gridtext.setAttribute("id", "textbox")
+    switch(klan){
+        case "Torreador":
+            gridtext.innerText = data[0].desc
+            artbox.setAttribute("class", "grid-torreador-art")
+            break;
+        case "Nosferatu":
+            gridtext.innerText = data[1].desc
+            artbox.setAttribute("class", "grid-nosferatu-art")
+            break;
+        case "Brujah":
+            gridtext.innerText = data[0].desc
+            artbox.setAttribute("class", "grid-brujah-art")
+            break;
+    }
+    box2.appendChild(gridtext)
+    box2.appendChild(artbox)
+    }
+
+  }
+    
+  </script>
+
+<br><br><br><br>
+<!--
+<img src="https://www.dexerto.com/wp-content/uploads/2021/09/08/vampire-the-masquerade-Bloodhunt-clans-ranked-1024x576.jpeg" alt="https://www.dexerto.com/wp-content/uploads/2021/09/08/vampire-the-masquerade-Bloodhunt-clans-ranked-1024x576.jpeg">
+-->
+</body>
+</html>

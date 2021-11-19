@@ -1,0 +1,89 @@
+body {
+  background-image: url("https://content.bloodhunt.com/public/2021-06/BloodHunt%20-%20WallPaper%20-%201920x1080.jpg");
+}
+
+h1 {
+  color: white;
+  font-size: 200%;
+}
+
+form {
+  color: white;
+  font-size: 200%;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box1,
+#box2 {
+  width: 100%;
+
+  }
+
+.grid-container {
+display: flex;
+flex-direction: column;  
+height: 80vh;
+width: 100%;
+}
+
+  .grid-text {
+      text-align: center;
+      font-size: large;
+      color: white;
+      
+      
+  }
+
+  .grid-torreador-art {
+    width: 100%;
+    height: 80%;
+    background-image: url("https://pbs.twimg.com/media/E57oIp3XEAcsB0X?format=jpg&name=large");
+}
+
+
+.grid-brujah-art {
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+    background-image: url("https://br.atsit.in/pl/wp-content/uploads/2021/10/vampire-the-masquerade-bloodlines-2-zostalo-prawie-anulowane-po-usunieciu-hardsuit-labs-z-projektu-dyrektor-generalny-paradox-potwierdza.jpg");
+}
+
+
+.grid-nosferatu-art {
+  width: 100%;
+    height: 80%;
+  background-image: url("https://geekandsundry.com/wp-content/uploads/2018/11/Nosferatu-FI.png");
+}
+
+
+
+
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-torreador-art {
+  size-adjust: auto;
+  background-image: url("https://pbs.twimg.com/media/E57oIp3XEAcsB0X?format=jpg&name=large");
+}
+
+
+.flex-brujah-art {
+  size-adjust: auto;
+  background-image: url("https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:600/h:535/q:75/https://bleedingcool.com/wp-content/uploads/2019/05/vampire-the-masquerade-bloodlines-2-brujah-clan.jpg");
+}
+
+
+.flex-nosferatu-art {
+size-adjust: auto;
+background-image: url("https://www.dexerto.com/wp-content/uploads/2021/09/20/vampire-the-masquerade-nosferatu-prowler-saboteur-nerfs.jpeg");
+}
